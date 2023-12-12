@@ -29,6 +29,7 @@ body {
   width: 100%;
   padding: 1.5rem;
   text-align: center;
+  z-index: 2;
 }
 
 .logo-name {
@@ -95,12 +96,33 @@ body {
   font-weight: 400;
   font-size: 1.2rem;
   color: var(--clr-secondary);
+  margin-bottom: -2rem;
 }
 
-.stars {
+
+.star-1 {
   position: absolute;
-  top: 0;
-  right: 0;
   bottom: 0;
-  z-index: 1;
+  right: 0;
+  width: 10%;
+}
+
+.star-2 {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 15%;
+}
+
+.star-3 {
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+}
+
+.star-4 {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  width: 10%;
 }
