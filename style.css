@@ -22,6 +22,7 @@ body {
   font-family: 'Nhassgrotesk';
   font-weight: 500;
   color: var(--clr-neutral-black);
+  background-color: var(--clr-neutral-white);
 }
 
 .primary-header {
@@ -84,7 +85,6 @@ body {
   line-height: 18rem;
   z-index: 1; 
 }
-
 .gab-title h2 {
   font-weight: 500;
   font-size: 3rem;
@@ -102,16 +102,16 @@ body {
 
 .star-1 {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 10%;
+  top: 4rem;
+  left: 0;
+  width: 14%;
 }
 
 .star-2 {
   position: absolute;
-  top: 3rem;
-  left: 0;
-  width: 15%;
+  top: 8rem;
+  right: 0;
+  width: 8%;
 }
 
 .star-3 {
@@ -122,7 +122,46 @@ body {
 
 .star-4 {
   position: absolute;
-  top: 5rem;
+  bottom: 0;
   right: 0;
   width: 10%;
+}
+
+.text-divider {
+  width: 100%;
+  height: 70vh;
+}
+
+.text-rows {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text-rows h2 {
+  font-weight: 400;
+}
+
+.art-gallery {
+  width: 100%;
+  height: 200vh;
+}
+
+.art-gallery-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.art-gallery-title h1 {
+  font-weight: 700;
+  font-size: 9rem;
+}
+
+.art-gallery-title p {
+  font-weight: 300;
+  font-size: 1rem;
 }
