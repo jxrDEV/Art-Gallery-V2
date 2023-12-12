@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Nhassgrotesk';
+  font-weight: 700;
+  src: url('assets/fonts/neue_haas_grotesk_display_pro_75_bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nhassgrotesk';
+  font-weight: 500;
+  src: url('assets/fonts/nhaasgroteskdspro-65md-webfont.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Nhassgrotesk';
+  font-weight: 400;
+  src: url('assets/fonts/nhaasgroteskdspro-55rg-webfont.woff2') format('woff2');
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Nhassgrotesk';
+  font-weight: 500;
+  color: var(--clr-neutral-black);
+}
+
+.primary-header {
+  position: absolute;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.logo-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.primary-navigation {
+  font-size: .9rem;
+}
+
+.nav-list a{
+  text-decoration: none;
+  color: inherit
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 5rem;
+}
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-white);
+}
+
+.gab-title {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gab-title h1 {
+  font-weight: 700;
+  font-size: 20rem;
+  color: var(--clr-primary);
+  cursor: default;
+  text-align: center;
+  line-height: 18rem;
+  z-index: 1; 
+}
+
+.gab-title h2 {
+  font-weight: 500;
+  font-size: 3rem;
+  color: var(--clr-secondary);
+  margin-bottom: -.3rem;
+}
+
+.gab-title h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--clr-secondary);
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
