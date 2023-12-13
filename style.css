@@ -148,7 +148,7 @@ body {
 
 .art-gallery {
   width: 100%;
-  height: 200vh;
+  height: 500vh;
 }
 
 .art-gallery-title {
@@ -192,4 +192,50 @@ body {
   &:nth-of-type(3) { grid-row: 7 / span 2; }
 }
 
+.about {
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+}
 
+.about-title {
+  font-size: 8rem;
+}
+
+.text-box-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: end;
+  margin-right: 5rem;
+  align-items: center;
+}
+
+.bullet p{
+  font-weight: 500;
+}
+
+.paragraph {
+  font-weight: 300;
+  font-size: 1.2rem;
+  width: 30%;
+}
+
+.text-box-2 {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box-3 {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: end;
+  margin-right: 5rem;
+  align-items: center;
+}
