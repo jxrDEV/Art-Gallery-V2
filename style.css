@@ -194,7 +194,7 @@ body {
 
 .about {
   width: 100%;
-  height: 170vh;
+  height: 180vh;
   display: flex;
   flex-direction: column;
 }
@@ -257,6 +257,70 @@ body {
   justify-content: start;
   align-items: center;
   padding-left: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 }
 
+.footer {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--clr-neutral-black);
+  color: var(--clr-neutral-white);
+}
+
+.author-title-1,
+.author-title-2 {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.author-title-1 div h1,
+.author-title-2 div h1{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.author-title-1 div h1 {
+  line-height: 7rem;
+}
+
+.author-title-2 div h1 {
+  line-height: 3rem;
+}
+
+.bottom-nav {
+ width: 100%; 
+ height: 55%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: end;
+}
+
+.socials {
+  width: 30%;
+  height: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.socials a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--clr-neutral-white);
+}
+
+.trademark {
+  width: 40%;
+  height: 55%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  margin-right: 1rem;
+}
