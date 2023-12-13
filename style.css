@@ -140,10 +140,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
 }
 
 .text-rows h2 {
   font-weight: 400;
+  width: 25%;
 }
 
 .art-gallery {
@@ -178,10 +180,40 @@ body {
   margin-top: 6rem;
 }
 
+.cursor {
+  position: fixed;
+  font-size: .9rem;
+  background-color: rgba(0, 0, 0, 0.203);
+  width: 85px;
+  padding: .4rem;
+  border-radius: 1rem;
+  text-align: center;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: opacity .15s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  color: white;
+}
+
+.cursor.active {
+  opacity: 1;
+}
+
+.hovered {
+  opacity: 1;
+}
+
+.container img:hover .cursor {
+  display: block;
+  opacity: 1;
+}
+
 .container img { 
   width: 100%;
   object-fit: cover;
   height: 100%;
+  cursor: none;
   border-radius: 1rem;
   &:nth-of-type(1) { grid-row: 1 / span 2; grid-column: 1 / span 2; }
   &:nth-of-type(5) { grid-row: 3 / span 2;}
