@@ -31,6 +31,8 @@ const dialogElement = document.querySelector('dialog');
 const artGallery = document.querySelectorAll('.art' );
 let previewBox = document.querySelector('.preview-box');
 let previewImg = previewBox.querySelector(".img-box img");
+let previewTitle = previewBox.querySelector(".art-title p");
+
 
 dialogElement.addEventListener('click', (event) => {
   if (event.target == dialogElement) {
@@ -48,8 +50,10 @@ window.onload = () => {
     artGallery[i].onclick = () => {
       function preview() {
         let selectedImgUrl = artGallery[i].querySelector('img').src;
+        let selectedArtTitle = artGallery[i].getAttribute('data-title');
 
         previewImg.src = selectedImgUrl;
+        previewTitle.innerText = selectedArtTitle;
         modal.showModal();
       }
 

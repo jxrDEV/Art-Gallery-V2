@@ -277,7 +277,19 @@ body {
   width: 100%;
   height: auto;
   max-height: 80vh;
-  border-radius: 1rem;
+  border-radius: .8rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.art-title {
+  margin-top: 1rem;
+  margin-bottom: -2rem;
+  text-align: center;
+}
+
+.art-title p {
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .modal {
@@ -288,7 +300,7 @@ body {
   padding: 3em;
   max-width: 100ch;
   border: 0;
-  border-radius: 1.5rem;
+  border-radius: 1.2rem;
   max-height: 100vh; 
   overflow-y: hidden; 
   background-color: var(--clr-neutral-white);
