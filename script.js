@@ -24,3 +24,44 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('scroll', () => {
   cursor.classList.remove('hovered');
 });
+
+const modal = document.querySelector('.modal');
+const dialogElement = document.querySelector('dialog');
+
+const artGallery = document.querySelectorAll('.art' );
+let previewBox = document.querySelector('.preview-box');
+let previewImg = previewBox.querySelector(".img-box img");
+
+dialogElement.addEventListener('click', (event) => {
+  if (event.target == dialogElement) {
+    dialogElement.close();
+  }
+  function haveflow () {
+    window.removeEventListener("wheel", preventDefault);
+  }
+  haveflow();
+})
+
+var preventDefault;
+window.onload = () => {
+  for (let i = 0; i < artGallery.length; i++) {
+    artGallery[i].onclick = () => {
+      function preview() {
+        let selectedImgUrl = artGallery[i].querySelector('img').src;
+
+        previewImg.src = selectedImgUrl;
+        modal.showModal();
+      }
+
+      function noflow () {
+        preventDefault = function (event) {
+          event.preventDefault();
+        }
+        window.addEventListener("wheel", preventDefault, { passive: false });
+      }
+      
+      preview();
+      noflow();
+    }
+  }
+}
