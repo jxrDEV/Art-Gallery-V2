@@ -69,3 +69,17 @@ window.onload = () => {
     }
   }
 }
+
+let gabTitle = document.querySelector('.gab-title h1');
+let titleText = gabTitle.textContent;
+
+function createLetterElements() {
+  gabTitle.innerHTML = '';
+  for (let i = 0; i < titleText.length; i++) {
+    let letter = document.createElement('span');
+    letter.textContent = titleText[i];
+    gabTitle.appendChild(letter);
+  }
+}
+
+createLetterElements();

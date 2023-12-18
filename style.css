@@ -16,6 +16,12 @@
   src: url('assets/fonts/nhaasgroteskdspro-55rg-webfont.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Starborn';
+  font-weight: 500;
+  src: url('assets/fonts/starborn-webfont.woff2') format('woff2');
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -93,6 +99,17 @@ body {
   line-height: 1;
   z-index: 1; 
 }
+
+.gab-title h1 span {
+  transition: font-family .15s ease-in-out, color .1s ease-in-out; 
+}
+
+.gab-title h1 span:hover {
+  cursor: pointer;
+  font-size: clamp(6.1rem, -2.5rem + 24vw, 15.8rem);
+  font-family: 'Starborn';
+}
+
 .gab-title h2 {
   font-weight: 500;
   font-size: clamp(1.5625rem, 1.0625rem + 2.5vw, 3rem);
