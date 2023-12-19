@@ -83,3 +83,53 @@ function createLetterElements() {
 }
 
 createLetterElements();
+
+const star1 = document.querySelector('.star-1');
+const star3 = document.querySelector('.star-3');
+const star4 = document.querySelector('.star-4');
+
+
+
+function loopstar1() {
+  const hrange = window.innerWidth - star1.clientWidth;
+  const vrange = window.innerHeight - star1.clientHeight;
+  const time = performance.now() * 0.22;
+
+  const x = Math.abs((time % (hrange * 2)) - hrange);
+  star1.style.left = `${x}px`;
+
+  const y = Math.abs((time % (vrange * 2)) - vrange);
+  star1.style.top = `${y}px`;
+  requestAnimationFrame(loopstar1)
+} 
+
+
+function loopstar3() {
+  const hrange = window.innerWidth - star3.clientWidth;
+  const vrange = window.innerHeight - star3.clientHeight;
+  const time = performance.now() * 0.24;
+
+  const x = Math.abs((time % (hrange * 2)) - hrange);
+  star3.style.left = `${x}px`;
+
+  const y = Math.abs((time % (vrange * 2)) - vrange);
+  star3.style.bottom = `${y}px`;
+  requestAnimationFrame(loopstar3)
+} 
+
+function loopstar4() {
+  const hrange = window.innerWidth - star4.clientWidth;
+  const vrange = window.innerHeight - star4.clientHeight;
+  const time = performance.now() * 0.21;
+
+  const x = Math.abs((time % (hrange * 2)) - hrange);
+  star4.style.right = `${x}px`;
+
+  const y = Math.abs((time % (vrange * 2)) - vrange);
+  star4.style.bottom = `${y}px`;
+  requestAnimationFrame(loopstar4)
+} 
+
+loopstar1();
+loopstar3();
+loopstar4();
