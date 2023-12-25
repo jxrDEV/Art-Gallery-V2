@@ -1,29 +1,36 @@
 const cursor = document.querySelector('.cursor');
 const art = document.querySelectorAll('.container img');
 
-art.forEach((image) => {
-  image.addEventListener('mouseenter', () => {
-    cursor.classList.add('hovered');
-  });
+function cursorHover() {
+  if (window.screen.width > 600) {
+    art.forEach((image) => {
+      image.addEventListener('mouseenter', () => {
+        cursor.classList.add('hovered');
+      });
+    
+      image.addEventListener('mousemove', (e) => {
+        cursor.classList.add('hovered');
+      });
+    
+      image.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hovered');
+      });
+    });
+    
+    
+    document.addEventListener('mousemove', (e) => {
+      const { clientX, clientY} = e;
+      cursor.style.left = `${clientX}px`;
+      cursor.style.top = `${clientY}px`;
+    });
+    
+    document.addEventListener('scroll', () => {
+      cursor.classList.remove('hovered');
+    });
+  }
+}
 
-  image.addEventListener('mousemove', (e) => {
-    cursor.classList.add('hovered');
-  });
-
-  image.addEventListener('mouseleave', () => {
-    cursor.classList.remove('hovered');
-  });
-});
-
-document.addEventListener('mousemove', (e) => {
-  const { clientX, clientY} = e;
-  cursor.style.left = `${clientX}px`;
-  cursor.style.top = `${clientY}px`;
-});
-
-document.addEventListener('scroll', () => {
-  cursor.classList.remove('hovered');
-});
+cursorHover();
 
 const modal = document.querySelector('.modal');
 const dialogElement = document.querySelector('dialog');
@@ -33,16 +40,19 @@ let previewBox = document.querySelector('.preview-box');
 let previewImg = previewBox.querySelector(".img-box img");
 let previewTitle = previewBox.querySelector(".art-title p");
 
+function popupModal() {
+  dialogElement.addEventListener('click', (event) => {
+    if (event.target == dialogElement) {
+      dialogElement.close();
+    }
+    function haveflow () {
+      window.removeEventListener("wheel", preventDefault);
+    }
+    haveflow();
+  });
+}
 
-dialogElement.addEventListener('click', (event) => {
-  if (event.target == dialogElement) {
-    dialogElement.close();
-  }
-  function haveflow () {
-    window.removeEventListener("wheel", preventDefault);
-  }
-  haveflow();
-})
+popupModal();
 
 var preventDefault;
 window.onload = () => {
@@ -70,30 +80,14 @@ window.onload = () => {
   }
 }
 
-let gabTitle = document.querySelector('.gab-title h1');
-let titleText = gabTitle.textContent;
-
-function createLetterElements() {
-  gabTitle.innerHTML = '';
-  for (let i = 0; i < titleText.length; i++) {
-    let letter = document.createElement('span');
-    letter.textContent = titleText[i];
-    gabTitle.appendChild(letter);
-  }
-}
-
-createLetterElements();
-
 const star1 = document.querySelector('.star-1');
 const star3 = document.querySelector('.star-3');
 const star4 = document.querySelector('.star-4');
 
-
-
 function loopstar1() {
   const hrange = window.innerWidth - star1.clientWidth;
   const vrange = window.innerHeight - star1.clientHeight;
-  const time = performance.now() * 0.22;
+  const time = performance.now() * 0.10;
 
   const x = Math.abs((time % (hrange * 2)) - hrange);
   star1.style.left = `${x}px`;
@@ -107,7 +101,7 @@ function loopstar1() {
 function loopstar3() {
   const hrange = window.innerWidth - star3.clientWidth;
   const vrange = window.innerHeight - star3.clientHeight;
-  const time = performance.now() * 0.24;
+  const time = performance.now() * 0.11;
 
   const x = Math.abs((time % (hrange * 2)) - hrange);
   star3.style.left = `${x}px`;
@@ -120,7 +114,7 @@ function loopstar3() {
 function loopstar4() {
   const hrange = window.innerWidth - star4.clientWidth;
   const vrange = window.innerHeight - star4.clientHeight;
-  const time = performance.now() * 0.21;
+  const time = performance.now() * 0.09;
 
   const x = Math.abs((time % (hrange * 2)) - hrange);
   star4.style.right = `${x}px`;
@@ -133,3 +127,21 @@ function loopstar4() {
 loopstar1();
 loopstar3();
 loopstar4();
+
+
+const nav = document.querySelector('.primary-header');
+let lastscrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  if(lastscrollY < window.scrollY) {
+    nav.classList.add('nav--hidden');
+  } else {
+    nav.classList.remove('nav--hidden');
+  }
+
+  lastscrollY = window.scrollY;
+});
+
+gsap.registerPlugin(ScrollTrigger)
+
+  

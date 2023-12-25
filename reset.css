@@ -3,11 +3,11 @@
   --clr-secondary: #ac9fbb;
 
   --clr-neutral-black: #1d1e2c;
-  --clr-neutral-white: #faf7fb;
+  --clr-neutral-white: #F8F2ED;
 }
 
 *,
-*::before,
+*::before, 
 *::after {
   box-sizing: border-box;
 }
@@ -21,7 +21,7 @@
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
-}
+} 
 
 html {
   scroll-behavior: smooth;
