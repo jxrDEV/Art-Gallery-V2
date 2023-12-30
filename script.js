@@ -144,4 +144,35 @@ window.addEventListener('scroll', () => {
 
 gsap.registerPlugin(ScrollTrigger)
 
-  
+gsap.from(".stars", 1.4, {
+  opacity: 0,
+  delay: 0.5
+})
+
+gsap.from(".container-nav", 1.4,{
+  opacity: 0,
+  x: 40,
+  ease: "power3.inOut",
+  stagger: 0.2
+})
+
+gsap.from(".gab-title h1", 1.4, {
+  opacity: 0,
+  x: 80,
+  ease: "power3.inOut",
+  delay: 0.1
+})
+
+gsap.from(".gab-title h2", 1.4, {
+  opacity: 0,
+  x: 60,
+  ease: "power3.inOut",
+  delay: 0.3
+})
+
+gsap.from(".gab-title h3", 1.4, {
+  opacity: 0,
+  x: 60,
+  ease: "power3.inOut",
+  delay: 0.3
+})
