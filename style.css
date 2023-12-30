@@ -24,6 +24,7 @@ body {
   color: var(--clr-neutral-black);
   background-color: var(--clr-neutral-white);
   overflow-x: hidden;
+  user-select: none;
 }
 
 .primary-header {
@@ -319,6 +320,7 @@ body {
   max-height: 100vh; 
   overflow-y: hidden; 
   background-color: var(--clr-neutral-white);
+  user-select: none;
 }
 
 .modal:focus {
