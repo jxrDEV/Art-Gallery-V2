@@ -147,8 +147,7 @@ gsap.registerPlugin(ScrollTrigger)
 gsap.from(".container-nav", 1.4,{
   opacity: 0,
   x: 40,
-  ease: "power3.inOut",
-  stagger: 0.2
+  ease: "power3.inOut"
 })
 
 gsap.from(".gab-title h1", 1.4, {
